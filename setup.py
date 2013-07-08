@@ -11,6 +11,7 @@ setup(name='collective.stringinterp.smartlink',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
+        "Development Status :: 4 - Beta",
         "Framework :: Plone",
         "Framework :: Plone :: 4.0",
         "Framework :: Plone :: 4.1",
@@ -21,7 +22,7 @@ setup(name='collective.stringinterp.smartlink',
       keywords='plone plonegov e-mail string interpolation',
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.it',
-      url='http://svn.plone.org/svn/collective/',
+      url='http://plone.org/products/collective.stringinterp.smartlink',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.stringinterp'],
