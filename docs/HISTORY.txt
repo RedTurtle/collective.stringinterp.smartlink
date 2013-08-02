@@ -10,8 +10,7 @@ Changelog
 0.3 (2013-08-02)
 ----------------
 
-- Nothing changed yet.
-
+- fixed missing overrides.zcml [keul]
 
 0.2 (2013-08-02)
 ----------------
