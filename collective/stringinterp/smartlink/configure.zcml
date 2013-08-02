@@ -9,25 +9,6 @@
 
    <i18n:registerTranslations directory="locales" />
 
-   <adapter
-       for="*"
-       provides="plone.stringinterp.interfaces.IStringSubstitution"
-       factory=".adapters.UrlSubstitution"
-       name="absolute_url"
-       />
-   <adapter
-       for="*"
-       provides="plone.stringinterp.interfaces.IStringSubstitution"
-       factory=".adapters.UrlSubstitution"
-       name="url"
-       />
-    <adapter
-       for="*"
-       provides="plone.stringinterp.interfaces.IStringSubstitution"
-       factory=".adapters.ParentUrlSubstitution"
-       name="parent_url"
-       />
-
    <!-- re-registering original adapters with a different name -->
    <adapter
        for="*"
