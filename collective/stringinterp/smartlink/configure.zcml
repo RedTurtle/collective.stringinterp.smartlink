@@ -1,49 +1,51 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+	xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="collective.stringinterp.smartlink">
 
    <include package="plone.stringinterp" />
    <include package="redturtle.smartlink" />
 
-   <!-- site contents -->
+   <i18n:registerTranslations directory="locales" />
+
    <adapter
-       for="Products.CMFCore.interfaces.IContentish"
+       for="*"
        provides="plone.stringinterp.interfaces.IStringSubstitution"
        factory=".adapters.UrlSubstitution"
        name="absolute_url"
        />
    <adapter
-       for="Products.CMFCore.interfaces.IContentish"
+       for="*"
        provides="plone.stringinterp.interfaces.IStringSubstitution"
        factory=".adapters.UrlSubstitution"
        name="url"
        />
     <adapter
-        for="Products.CMFCore.interfaces.IContentish"
-        provides="plone.stringinterp.interfaces.IStringSubstitution"
-        factory=".adapters.ParentUrlSubstitution"
-        name="parent_url"
+       for="*"
+       provides="plone.stringinterp.interfaces.IStringSubstitution"
+       factory=".adapters.ParentUrlSubstitution"
+       name="parent_url"
        />
 
-   <!-- comments -->
+   <!-- re-registering original adapters with a different name -->
    <adapter
-       for="plone.app.discussion.interfaces.IComment"
+       for="*"
        provides="plone.stringinterp.interfaces.IStringSubstitution"
-       factory=".adapters.UrlSubstitution"
-       name="absolute_url"
+       factory=".adapters.OriginalUrlSubstitution"
+       name="original_absolute_url"
        />
    <adapter
-       for="plone.app.discussion.interfaces.IComment"
+       for="*"
        provides="plone.stringinterp.interfaces.IStringSubstitution"
-       factory=".adapters.UrlSubstitution"
-       name="url"
+       factory=".adapters.OriginalUrlSubstitution"
+       name="original_url"
        />
     <adapter
-       for="plone.app.discussion.interfaces.IComment"
+       for="*"
         provides="plone.stringinterp.interfaces.IStringSubstitution"
-        factory=".adapters.ParentUrlSubstitution"
-        name="parent_url"
+        factory=".adapters.OriginalParentUrlSubstitution"
+        name="original_parent_url"
        />
 
 </configure>

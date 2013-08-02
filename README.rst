@@ -6,9 +6,9 @@ Introduction
 
 When using Plone content rules **mail action**, you can rely on some URL-like variables:
 
+* ``${url}``
 * ``${absolute_url}``
 * ``${parent_url}``
-* ``${url}``
 
 This product could help your when your Plone site use different URLs for backend (http://admin.yourcompany.com/) and
 front-end (http://www.yourcompany.com/).
@@ -22,6 +22,12 @@ Before replacing URL variables, it try to apply Smart Link configuration to them
 
 __ http://plone.org/products/redturtle.smartlink/
 __ http://plone.org/products/redturtle.smartlink/#handle-back-end-front-end-urls
+
+Original mappings (that do not use Smart Link configuration) will be still available using new names:
+
+* ``${original_url}``
+* ``${original_absolute_url}``
+* ``${original_parent_url}``
 
 Credits
 =======

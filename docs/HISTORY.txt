@@ -4,8 +4,10 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- get rid of comments adapters
+  [keul]
+- original interpolations are now available through new names
+  [keul]
 
 0.1 (2013-07-08)
 ----------------
